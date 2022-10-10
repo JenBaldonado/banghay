@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(../assets/High\ Resolution\ Logo\ -\ Transparent\ Background.png); /*https://stackoverflow.com/questions/4997493/set-opacity-of-background-image-without-affecting-child-elements*/
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 512px;
+}
+/*main window*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 920px;
+  object-fit: cover;
+  gap: 16px;
+}
+
+.card-item {
+  border: 2px solid black;
+  height:16rem;
+  padding: 10px;
+}
+
+img {
+  height: 12rem;
+  width: 12rem;
+  margin: 5px;
+}
+
+p {
+  padding-top: 15px;
+}
+
+.upldbtn {
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: -30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*Upload Window*/
+.upld {
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+.upload-container {
+  background-color: rgb(0, 225, 255);
+  height: 50vh;
+  width: 60vw;
+  border-radius: 16px;
+  max-width: 500px;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/*close button*/
+.closebtn{
+  display:flex;
+  justify-content: flex-end;
+  margin:0 20px 100px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  background: #03549a;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+}
+
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+}
+
+
+
+
+/*Download Window*/
+.download-popup {
+  display:none;
+}
+
+.side-nav {
+  background-color: #f1f1f1;
+  width: 25%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: blue;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.files {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+  display: block;
+}
